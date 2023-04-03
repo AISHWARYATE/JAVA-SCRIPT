@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height: 400px;
+            width: 500px;
+            margin-left: 400px;
+            background: silver;  
+        }
+        #height
+        {
+            margin-left: 50px;
+        }
+        #weight
+        {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <h3><center></h3>BMI CALCULATE</center></h3><br><br>
+        <label for="">HEIGHT</label><input type="text" id="height"><br><br>
+        <label for="">WEIGHT</label><input type="text" id="weight"><br><br>
+        <input type="button" value="compute bmi" onclick="bmical()">
+        <p id="p"></p><br>
+        <p id="p1"></p>
+    </form>
+    </div>
+    <script>
+        function bmical()
+        {
+            var ht=parseInt(document.getElementById("height").value);
+            var wt=parseInt(document.getElementById("weight").value);
+            var bmi=wt/(ht/100*ht/100);
+            document.getElementById("p").innerHTML=bmi;
+            if(bmi<=18)
+            {
+                document.getElementById("p1").innerHTML="under weight";
+            }
+            else if(bmi> 18 && bmi <25)
+            {
+                document.getElementById("p1").innerHTML="you are healthy";
+            }
+            else
+            {
+                document.getElementById("p1").innerHTML="over weight";
+            }
+
+        }
+    </script>
+</body>
+</html>

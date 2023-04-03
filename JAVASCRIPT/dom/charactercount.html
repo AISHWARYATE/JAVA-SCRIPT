@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height: 400px;
+            width: 500px;
+            margin-left: 400px;
+            background: silver;  
+        }
+        #str
+        {
+            margin-left: 50px;
+        }
+        #btn
+        {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <h3><center>CHARACTER COUNT</center></h3>
+     <label for="">Enter the string</label><input type="text" id="str"><br><br>
+     <input type="button" id="btn" value="length of str" onclick="count()">
+     <p id="p"></p>
+    </form>
+    </div>
+    <script>
+    function count()
+    {
+        let string=document.getElementById("str").value;
+        let l=string.length;
+        document.getElementById("p").innerHTML=l;
+    }
+    </script>
+</body>
+</html>

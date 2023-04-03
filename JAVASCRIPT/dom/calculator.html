@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height: 500px;
+            width: 300px;
+            margin-left: 400px;
+            background: silver; 
+            border: 2px solid rgb(43, 220, 226);
+            border-radius: 10px; 
+        }
+        .box1
+        {
+            height: 50px;
+            width: 200px;
+            background: green;  
+            margin-left: 50px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 2px 1px black;
+
+        }
+        #c
+        {
+            height: 50px;
+            width: 50px;
+            margin-left: 50px;
+            margin-top: 20px;
+
+
+        }
+        #b
+        {
+            
+            height: 50px;
+            width: 50px;
+            margin-top: 20px;
+
+        }#d
+        {
+            
+            height: 50px;
+            width: 50px;
+            margin-top: 20px;
+
+        }
+        #x{
+        
+            height: 50px;
+            width: 50px;
+            margin-top: 20px;
+
+        }
+        #seven
+        {
+            height: 50px;
+            width: 50px;
+            margin-left: 50px;
+        }
+        #eight
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #nine
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #minus
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #four
+        {
+            height: 50px;
+            width: 50px;
+            margin-left: 50px;
+        }
+        #five
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #six
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #plus
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #one
+        {
+            height: 50px;
+            width: 50px;
+            margin-left: 50px;
+        }
+        #two
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #three
+        {
+            height: 50px;
+            width: 50px;
+        }
+        #equal
+        {
+            height: 80px;
+            width: 50px;
+        }
+        #zero
+        {
+            height: 50px;
+            width: 150px;
+            margin-left: 50px; 
+        }
+        #dot
+        {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <form action="">
+        <div class="box1" id="output">
+        </div>
+        <input type="button" id="c"value="Clear" onclick="clearScreen()">
+        <input type="button" id="b" value="b" onclick="blackspace()">
+        <input type="button" id="d" value="/" onclick="insert('/')">
+        <input type="button" id="x" value="*" onclick="insert('*')"><br><br>
+        <input type="button" id="seven"value="7" onclick="insert('7')">
+        <input type="button" id="eight"value="8" onclick="insert('8')">
+        <input type="button" id="nine"value="9" onclick="insert('9')">
+        <input type="button" id="minus"value="-" onclick="insert('-')"><br><br>
+        <input type="button" id="four"value="4" onclick="insert('4')">
+        <input type="button" id="five"value="5" onclick="insert('5')">
+        <input type="button" id="six"value="6" onclick="insert('6')">
+        <input type="button" id="plus"value="+" onclick="insert('+')"><br><br>
+        <input type="button" id="one"value="1" onclick="insert('1')">
+        <input type="button" id="two"value="2" onclick="insert('2')">
+        <input type="button" id="three"value="3" onclick="insert('3')">
+        <input type="button" id="equal"value="=" onclick="calculate()"><br><br>
+        <input type="button" id="zero"value="0" onclick="insert('0')">
+        <input type="button" id="dot"value="." onclick="insert('.')">
+      </form>
+    </div>
+    <script>
+        function clearScreen()
+         {
+         document.getElementById("output").innerHTML = " ";
+         }
+
+        function insert(num)
+        {
+          document.getElementById("output").innerHTML=document.getElementById("output").innerHTML+num; 
+        }
+        function calculate() 
+        {
+        var p = document.getElementById("output").innerHTML;
+        var q = eval(p);
+        document.getElementById("output").innerHTML = q;
+        }
+        
+</script>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+          height: 400px;
+          width: 300px;
+          background: silver; 
+          margin-left: 500px;
+          margin-top: 150px;   
+        }
+        #first
+        {
+            margin-left: 50px;
+            margin-top: 40px;
+        }
+        #second
+        {
+            margin-left: 50px;
+        }
+        #third
+        {
+            margin-left: 50px;
+        }
+        #btn
+        {
+            margin-left: 50px;
+        }
+        #p
+        {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+        <h3 style="margin-left: 50px;">LARGEST OF THREE<br> NUMBERS</h3>
+        <input type="text" id="first"><br><br>
+        <input type="text" id="second"><br><br>
+        <input type="text" id="third"><br><br>
+        <input type="button" id="btn" value="click" onclick="largest()">
+        <p id="p"></p>
+        </div>
+    </form>
+  <script>
+    function largest()
+    {
+    var a=document.getElementById("first").value;
+    var b=document.getElementById("second").value;
+    var c=document.getElementById("third").value;
+    if(a>b)
+    {
+        document.getElementById("p").innerHTML="a is biggest";
+    }
+    else if(a>c)
+    {
+        document.getElementById("p").innerHTML="a is biggest";
+    }
+    else if(b>c)
+    {
+        document.getElementById("p").innerHTML="b is biggest";
+    }
+    else
+    {
+        document.getElementById("p").innerHTML="c is biggest";
+    }
+}
+    
+  </script>  
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container
+       {
+        height: 500px;
+        width: 500px;
+        background: silver;
+       }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container"><h3>REGISTRATION FORM</h3>
+            <form>
+            <table>
+                <tr><td><label for="">First Name:</label></td><td><input id="fname" type="text"></td></tr>
+                <tr><td><span id="firstname" style="color: red;"></span></td></tr>
+                <tr><td><label for="">Last Name:</label></td><td><input id="lname" type="text"></td></tr>
+                <tr><td><span id="lastname" style="color: red;"></span></td></tr>
+                <tr><td><label for="">Fathers Name:</label></td><td><input id="faname"type="text"></td></tr>
+                <tr><td><span id="fathername" style="color: red;"></span></td></tr>
+                <tr><td><label for="">DOB:</label></td><td><input type="date"></td></tr>
+                <tr><td><label for="">Tel:</label></td><td><input id="telno"  type="text"></td></tr>
+                <tr><td><span id="teln" style="color: red;"></span></td></tr>
+                <tr><td><label for="">High school Name:</label></td><td><input id="sname"  type="text"></td></tr>
+                <tr><td><span id="schoolname" style="color: red;"></span></td></tr>
+                <tr><td><label for="">Permenent address:</label></td><td><input id="address" type="text"></td></tr>
+                <tr><td><span id="paddress" style="color: red;"></span></td></tr>
+                <tr><td><label for="">Your level:</label></td><td>
+                    <select>
+                    <option value="1st year">1st year</option>
+                    <option value="2nd year">2nd year</option>
+                    <option value="3rd year">3rd year</option>
+                </select></td></tr>
+                <tr><td><label for="">Email:</label></td><td><input type="email"></td></tr>
+                <tr><td><label for="">Degree program:</label></td><td>
+                    <select>
+                    <option value="1st year">BA</option>
+                    <option value="2nd year">BSC</option>
+                    <option value="3rd year">Bcom</option>
+                </select></td></tr>
+                <tr><td><input type="button" value="Register" onclick="validate()"></td></tr>
+            </table>
+            </form>
+    </center>
+    </div>
+    <script>
+        function validate()
+        {
+        let x=document.getElementById('fname').value;
+        if(x=='')
+        {
+            document.getElementById('firstname').innerHTML='please enter your fname'
+        }
+        else
+        {
+            document.getElementById('firstname').innerHTML=''
+        }
+        let y=document.getElementById('lname').value;
+        if(y=='')
+        {
+            document.getElementById('lastname').innerHTML='please enter your lname'
+        }
+        else
+        {
+            document.getElementById('firstname').innerHTML=''
+        }
+        let fa=document.getElementById('faname').value;
+        if(fa=='')
+        {
+            document.getElementById('fathername').innerHTML='please enter your fathersname'
+        }
+        else
+        {
+            document.getElementById('fathername').innerHTML=''
+        }
+        let tel=document.getElementById('telno').value;
+        if(tel=='')
+        {
+            document.getElementById('teln').innerHTML='please enter the telephone number'
+        }
+        else
+        {
+            document.getElementById('teln').innerHTML=''
+        }
+        let h=document.getElementById('sname').value;
+        if(h=='')
+        {
+            document.getElementById('schoolname').innerHTML='please enter the schoolname'
+        }
+        else
+        {
+            document.getElementById('schoolname').innerHTML=''
+        }
+        let a=document.getElementById('address').value;
+        if(a=='')
+        {
+            document.getElementById('paddress').innerHTML='please enter the address'
+        }
+        else
+        {
+            document.getElementById('paddress').innerHTML=''
+        }
+
+
+        }
+    </script>
+</body>
+</html>

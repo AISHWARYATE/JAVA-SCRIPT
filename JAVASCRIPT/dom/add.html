@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+          height: 250px;
+          width: 250px;
+          background: silver; 
+          margin-left: 500px;
+          margin-top: 150px; 
+        }
+        #box1
+        {
+          margin-left: 30px;
+          margin-top: 20px;
+        }
+        #box2
+        {
+          margin-left: 30px;
+          margin-top: 20px;
+        }
+        #btn
+        {
+            margin-left: 100px;
+        }
+        #para
+        {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <input type="text" id="box1"><br><br>
+        <input type="text" id="box2"><br><br>
+        <input id="btn"type="button" value="add" onclick="add()">
+        <p id="para"></p>
+    </form> 
+    </div>
+    <script>
+        function add()
+        {
+            var a=parseInt(document.getElementById("box1").value);
+            var b=parseInt(document.getElementById("box2").value);
+            var c=a+b;
+            console.log(c);
+            document.getElementById("para").innerHTML=c;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class areacal
+        {
+          constructor(l,r,h,b)
+          {
+            this.l=l;
+            this.r=r;
+            this.h=h;
+            this.b=b;
+          }
+        
+        circle()
+        {
+            var ca=2*3.14*this.r;
+            console.log(ca);
+        }
+
+        traingle()
+        {
+            var ta=1/2*(this.b*this.h);
+            console.log(ta);
+        }
+
+        rectangle()
+        
+        {
+            var ra=this.l*this.b;
+            console.log(ra);
+        }
+    }
+    let  ob=new areacal(3,1,1,4);
+    ob.circle();
+    ob.traingle();
+    ob.rectangle();
+    </script>
+</body>
+</html>

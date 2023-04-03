@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <form action="">
+            <input type="text" id="regno"><br><br>
+            <input type="button" value="GET RESULT" onclick="validateform()">
+        </form>
+    </div>
+    </center>
+    <script>
+        function validateform()
+        {
+            let r=document.getElementById('regno');
+            if(r=="")
+            {
+                alert("please enter the  register number");
+                return;
+                
+            }
+            if(isNaN(r))
+            {
+                alert("invalid register number");
+                return;
+                
+            }
+            l=regno.length;
+            if(l<7)
+            {
+                alert("the register number must have 7 digits");
+                return;
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

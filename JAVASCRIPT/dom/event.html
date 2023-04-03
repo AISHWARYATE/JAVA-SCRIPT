@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>WELCOME TO DOM EVENTS</h1>
+    <div id="customText">
+    <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows <br>
+        programs and scripts to dynamically access and update the content, ...
+    </p>
+    </div>
+    <div id="divItem">
+        <img id="imageItem" onmouseover="changeImage()" onmouseout="resetImage()" src="./img/flower1.jpg">
+    </div>
+    <button onclick="change()">change</button>
+    <!-- disapper an image by clicking a button -->
+    <button onclick="hide()">Disapper</button>
+    <!--to show the element---->
+    <button ondblclick="reset()">Reset</button>
+     <script src="./event.js"></script>
+    </center>
+</body>
+</html>

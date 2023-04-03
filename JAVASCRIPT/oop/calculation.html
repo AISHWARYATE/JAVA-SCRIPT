@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class calculation1
+        {
+            
+            additiction(a,b)
+            {
+                var add=a+b;
+                console.log(add);
+            }
+        }
+        
+
+        class  calculation2
+        {
+            
+            multiplication(a,b)
+            {
+                var mul=a*b;
+                console.log(mul);
+            }
+            
+        }
+        
+        class calculation3 extends(calculation1,calculation2)
+        {
+            div(a,b)
+            {
+                var d=a/b;
+                console.log(d);
+            }
+        }
+        let ob=new calculation1();
+        let om=new calculation2();
+        let od=new calculation3();
+
+        ob.additiction(6,3);
+        om.multiplication(6,3);
+        od.div(6,3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            border: 2px solid black;
+            height: 50px;
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+       <div class="div">
+    <p id="p">Object-oriented Programming treats data as a crucial</p></div><br><br>
+        
+        <img src="./img/flower1.jpg" alt="asdfgh dfghj" onmouseover="changeImage()" alt="" onmouseout="revert()">
+        <img src="./img/flower2.jpg" height="160px" width="200px" alt="asdfgh dfghj" onmouseover="changeImage()" alt="" onmouseout="revert()">
+        <img src="./img/flower1.jpg" alt="asdfgh dfghj" onmouseover="changeImage()" alt="" onmouseout="revert()"><br><br>
+
+        <input type="button" id="b" value="click me" onclick="changebackground()">
+    </center>
+    <script>
+        function changeImage(element)
+        {
+            document.getElementById("p").innerHTML="element.alt";
+        }
+        function changebackground()
+        {
+            document.getElementById("b").style.backgroundColor = 'green';
+        }
+        function revert()
+        {
+            document.getElementById("p").innerHTML="Object-oriented Programming treats data as a crucial";
+        }
+    </script>
+</body>
+</html>

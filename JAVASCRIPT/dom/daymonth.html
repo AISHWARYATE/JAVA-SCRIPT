@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {   
+            margin-top: 100px;
+            margin-left: 500px;
+            height: 300px;
+            width: 300px;
+            background: silver;
+        }
+        #box1
+        {
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        #btn
+        {
+            margin-left: 120px;
+            margin-top: 30px;
+        }
+        #p
+        {
+            margin-left: 90px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <input type="text" id="box1" value="enter the number"><br><br>
+        <input type= "button" id="btn" value="click" onclick="month()">
+        <p id="p"></p>
+    </form>
+    </div>
+    <script>
+       
+        function month()
+        {
+        var m=parseInt(document.getElementById("box1").value);
+        if(m==1)
+        {
+            document.getElementById("p").innerHTML="janvary";
+        }
+        else if(m==2)
+        {
+            document.getElementById("p").innerHTML="februvary";
+        }
+        else if(m==3)
+        {
+            document.getElementById("p").innerHTML="march" 
+        }
+        else if(m==4)
+        {
+            document.getElementById("p").innerHTML="april";  
+        }
+        else if(m==5)
+        {
+            document.getElementById("p").innerHTML="may";  
+        }
+        else if(m==6)
+        {
+            document.getElementById("p").innerHTML="june";  
+        }
+        else if(m==7)
+        {
+            document.getElementById("p").innerHTML="julay";  
+        }
+        else if(m==8)
+        {
+            document.getElementById("p").innerHTML="agust";  
+        }
+        else if(m==9)
+        {
+            document.getElementById("p").innerHTML="september";  
+        }
+        else if(m==10)
+        {
+            document.getElementById("p").innerHTML="october";  
+        }
+        else if(m==11)
+        {
+            document.getElementById("p").innerHTML="november";  
+        }
+        else if(m==12)
+        {
+           document.getElementById("p").innerHTML="december";  
+        }
+    }
+    </script>
+</body>
+</html>

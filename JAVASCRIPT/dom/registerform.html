@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+         height: 500px;
+         width: 500px;
+         background: silver;
+        }
+       </style>
+</head>
+<body>
+    <center>
+        <div class="contain"><h3>STUDENT REGISTRATION FORM</h3>
+            <form>
+                <table>
+                    <tr><td><label for="">first name</label><br>
+                    <input type="text" id="fname"></td></tr>
+                    <tr><td> <span id="fn" style="color: red;"></span> </td></tr>
+                    <tr><td><label for="">last name</label><br>
+                    <input id="lname" type="text"></td></tr>
+                    <tr><td> <span id="ln" style="color: red;"></span> </td></tr>
+                    <tr><td><label for="">fathers name</label><br>
+                    <input id="fathername" type="text"></td></tr>
+                    <tr><td> <span id="fatn" style="color: red;"></span> </td></tr>
+
+                    <tr><td><label for="">address</label><br>
+                        <input type="text"></td></tr>
+                    <tr><td><label for="">gender</label></td></tr>
+                        <tr><td><input type="radio" name="gender">male
+                        <input type="radio" name="gender">female</tr>
+                        <tr><td><label for="">city</label><br>
+                            <select name="city" id="">
+                                <option value="city">calicult</option>
+                                <option value="city">kannur</option>
+                                <option value="city">malappuram</option>
+                            </select></tr><br><br>
+                </table>
+                <input type="button"  onclick="validate()" value="LOGIN">
+                       </form>
+        </div>
+    </center>
+    <script>
+        
+        function validate()
+        {
+            var name=document.getElementById('fname').value;
+            var regname = /^[A-Za-z]+$/;
+            if(name=='')
+            {
+                document.getElementById('fn').innerHTML="enter your first name";
+                //console.log("enter your first name");
+            }
+            else  if(!regname.test(name.value))
+            {
+                document.getElementById('fn').innerHTML="invalid name given"; 
+            }
+            else
+            {
+                document.getElementById('fn').innerHTML="valid ";
+            }
+        
+            
+             // last name
+            var nm=document.getElementById('lname');
+            var lregname= /^[A-Za-z]+$/;
+            if(nm == '')
+            {
+               document.getElementById('ln').innerHTML="please enter your last name"
+            }
+            else if(lregname.test(nm.value))
+            {
+                document.getElementById('ln').innerHTML="invalid name given";
+            }
+            else
+            {
+                document.getElementById('ln').innerHTML="valid name given.";
+
+            }
+                //fa name
+            var fregname= /^[A-Za-z]+$/;
+            var faname=document.getElementById('fathername');
+            if(regname.test(faname.value)) 
+            {
+                document.getElementById('fatn').innerHTML="valid name given";
+            }  
+            else
+            {
+                document.getElementById('fatn').innerHTML="invalid name given";
+
+            }         
+        }
+    </script>
+</body>
+</html>

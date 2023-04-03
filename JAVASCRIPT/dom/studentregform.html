@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+        <h1>STUDENT REGESTRATION FORM</h1>
+        <form>
+        <table>
+            <tr><td><label for="">First Name:</label></td><td><input id="fname" type="text" size="50px"></td></tr>
+            <tr><td><span id="firstname" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Last Name:</label></td><td><input id="lname"type="text" size="50px"></td></tr>
+            <tr><td><span id="lastname" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Email:</label></td><td><input id="mail"type="email" size="50px"></td></tr>
+            <tr><td><span id="email" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Mobile no:</label></td><td><input type="text" id="number" value="only 10 digits are allowed" size="50px"></td></tr>
+            <tr><td><span id="mobilenumber" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Gender:</label></td><td><input id="ge" type="radio" id="male" name="gender" >male<input id="femle" type="radio" name="gender">Female</td></tr>
+            <tr><td><span id="gnder" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Date of birth:</label></td><td><input type="date" size="50px"></td></tr>
+            <tr><td><label for="">Address</label></td><td><textarea name="" id="add" cols="px" rows="px"></textarea></td></tr>
+            <tr><td><span id="address" style="color: red;"></span></td></tr>
+            <tr><td><label for="">City:</label></td><td><input type="text" id="city" size="50px"></td></tr>
+            <tr><td><span id="ct" style="color: red;"></span></td></tr>
+            <tr><td><label for="">Area Pin:</label></td><td><input type="text" id="pincode" size="50px"></td></tr>
+            <tr><td><span id="pn" style="color: red;"></span></td></tr>
+            <tr><td><label for="">State:</label></td><td><input id="state"type="text" size="50px"></td></tr>
+            <tr><td><span id="s" style="color: red;"></span></td></tr>
+
+
+
+            <tr><td><label for="">Qulification:</label></td>
+                <td><select>
+                <option value="msc">Msc</option>
+                <option value="ma">MA</option>
+                <option value="m.com">M.com</option>
+                <option value="b.tec">Btec</option>
+            </select></td></tr>
+            <tr><td><label for="">Specialization</label></td><td><input type="checkbox" id="check">Computer Science</td></tr>
+            <tr><td><span id="ch" style="color: red;"></span></td></tr>
+             <tr><td></td><td><input type="checkbox">Information Technology</td></tr>
+                <tr><td></td><td><input type="checkbox">Computer Architecture</td></tr>
+                <tr><td></td><td><input type="checkbox">Tele Communication </td></tr>
+                <tr><td><label for="">Pass word</label></td><td><input id="password"type="password" size="50px"></td></tr>
+                <tr><td><span id="pwd" style="color: red;"></span></td></tr>
+                <tr><td><input type="button" value="register" onclick="validateForm()"></td></tr>
+
+            </tr>
+        </table>
+        </form>
+
+
+        <script>
+            function validateForm()
+            {
+                let x = document.getElementById("fname").value;
+                console.log(x);
+                if (x == '')
+                {
+                    document.getElementById('firstname').innerHTML='enter your first name'
+                }
+                else
+                {
+                    document.getElementById('firstname').innerHTML=''
+                }
+                let y = document.getElementById("lname").value;
+                console.log(y);
+                if (y == '') 
+                {
+                   document.getElementById('lastname').innerHTML='enter your last name'
+                }
+                else{
+                    document.getElementById('lastname').innerHTML=''
+                }
+                let z=document.getElementById('mail').value;
+                console.log(z);
+                if (z == '')
+                {
+                    document.getElementById('email').innerHTML='enter your  email id'
+                }
+                else
+                {
+                    document.getElementById('email').value=''
+                }
+                let m=document.getElementById('number').value;
+                console.log(m);
+                if (m == '')
+                {
+                    document.getElementById('mobilenumber').innerHTML='enter your mobile number'
+                }
+                else{
+                    document.getElementById('mobilenumber').innerHTML=''
+                }
+                let mn=document.getElementById('number').value;
+                length=mn.length;
+                if (length!=10)
+                {
+                    document.getElementById('mobilenumber').innerHTML='must be 10 numbers'
+                }
+                else
+                {
+                    document.getElementById('mobilenumber').innerHTML=''
+                }
+                let ad=document.getElementById('add').value;
+                console.log(add);
+                if (ad == '')
+                {
+                    document.getElementById('address').innerHTML='enter your address'
+                }
+                else{
+                    document.getElementById('address').innerHTML=''
+                }
+                let c=document.getElementById('city').value;
+                console.log(add);
+                if (c == '')
+                {
+                    document.getElementById('ct').innerHTML='enter your city'
+                }
+                else{
+                    document.getElementById('ct').innerHTML=''
+                }
+                let pin=document.getElementById('pincode').value;
+                console.log(pin);
+                if (pin == '')
+                {
+                    document.getElementById('pn').innerHTML='enter your pin code'
+                }
+                else{
+                    document.getElementById('pn').innerHTML=''
+                }
+                let st=document.getElementById('state').value;
+                console.log(st);
+                if (st == '')
+                {
+                    document.getElementById('s').innerHTML='enter your state'
+                }
+                else{
+                    document.getElementById('s').innerHTML=''
+                }
+                let pas=document.getElementById('password').value;
+                console.log(pas);
+                if (pas.length<8)
+                {
+                    document.getElementById('pwd').innerHTML='Password must be at least 8 characters long '
+                }
+                else{
+                    document.getElementById('pwd').innerHTML=''
+                }
+
+                let checkbox = document.getElementById('check').value;
+                if(checkbox.checked)
+                {
+                    document.getElementById('ch').innerHTML=''
+                }
+                else{
+                    document.getElementById('ch').innerHTML='please check '
+                }
+                if(document.getElementById('ge').checked) 
+                {   
+                document.getElementById("gnder").innerHTML= document.getElementById("male").value  + " radio button is checked";   
+                }
+                else if(document.getElementById('ge').checked)
+                {
+                document.getElementById("gnder").innerHTML= document.getElementById("female").value  + " radio button is checked";   
+                }
+                else
+                {
+                    document.getElementById("ge").innerHTML= "You have not selected gender";
+                }
+
+
+
+
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

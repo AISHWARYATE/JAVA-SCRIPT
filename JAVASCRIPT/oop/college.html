@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      class college
+      {
+      constructor(name,address,department)
+      {
+          this.name=name;
+          this.address=address;
+          this.department=department;
+      }
+      details()
+      {
+         return(`Details of college ${this.name},${this.address},${this.department}`);
+         
+      }
+      }
+      const ob= new college('RSMSNDP','abcde','PHYSICS');
+      const o= new college('CCSIT VATAKARA','abcde','COMPUTER SCIENCE');
+
+      console.log(ob.details());
+      console.log(o.details());
+      </script>
+</body>
+</html>
+
+
+
+
+
+  
+

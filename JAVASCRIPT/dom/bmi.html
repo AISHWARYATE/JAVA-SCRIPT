@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height: 400px;
+            width: 500px;
+            margin-left: 400px;
+            background: silver;
+        }
+        #btn
+        {
+           margin-left: 150px;
+        }
+    </style>
+    </head>
+    <body> 
+       <div class="container">
+       <form>
+        <h1><center>BMI CALCULATOR</center></h1>
+        Your Weight(kg): <input type="text" id="weight" size="10" style="margin-left: 20px;"><br><br>
+        Your Height(cm): <input type="text" id="height" size="10" style="margin-left: 20px;"><br><br>
+        <input type="button" value="Calculate BMI" id="btn" style="margin-left: 100px;" onclick="bmical()"><br><br>
+        Your BMI: <input type="text" id="bmi"style="margin-left:30px;" size="10"><br><br>
+        This Means: <input type="text" id="meaning" style="margin-left: 30px;" size="25"><br><br>
+        <input type="reset" style="margin-left:130px;" value="Reset" />
+        </form>
+        </div>
+    <script> 
+    function bmical() 
+    {
+    var wt = parseInt(document.getElementById("weight").value);
+    var ht = parseInt(document.getElementById("height").value);
+    	
+         var b = wt/(ht/100*ht/100);
+         document.getElementById("bmi").innerHTML=b;
+    if(b< 18)
+    {
+         document.getElementById("meaning").innerHTML="That you are too thin";
+    }
+    else if(b > 18 && b < 25)
+    {
+        document.getElementById("meaning").innerHTML="That you are healthy";
+    }
+    else if(b > 25)
+    {
+        document.getElementById("meaning").innerHTML="That you have overweight;"
+    }
+    else
+    {
+        alert("Please Fill in everything correctly")
+    }
+    }
+    </script>
+    </body>
+    </html>

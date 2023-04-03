@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container
+    {
+            margin-top: 100px;
+            margin-left: 500px;
+            height: 300px;
+            width: 300px;
+            background: silver;
+    }
+    #box1
+    {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    #btn
+    {
+        margin-left: 120px;
+        margin-top: 30px;
+    }
+    #p
+    {
+        margin-left: 90px;  
+    }
+</style>
+<body>
+    <div class="container">
+    <form>
+        <input type="text" id="box1"><br><br>
+        <input type="button" value="click" id="btn"onclick="color()">
+        <p id="p"></p>
+    </form>
+    </div>
+    <script>
+        function color()
+        { 
+        var a=document.getElementById("box1").value;
+        if(a=="v")
+        {
+            document.getElementById("p").innerHTML="violet";
+        }
+        else if(a=="i")
+        {
+            document.getElementById("p").innerHTML="indiogo";
+        }
+        else if(a=="b")
+        {
+            document.getElementById("p").innerHTML="blue";
+        }
+        else if(a=="g")
+        {
+            document.getElementById("p").innerHTML="green";
+        }
+        else if(a=="y")
+        {
+            document.getElementById("p").innerHTML="yellow";
+        }
+        else if(a=="o")
+        {
+            document.getElementById("p").innerHTML="orange";
+        }
+        else if(a=="r")
+        {
+            document.getElementById("p").innerHTML="red";
+        }
+        else
+        {
+            document.getElementById("p").innerHTML="invalid";
+        }
+    }
+    </script>
+</body>
+</html>

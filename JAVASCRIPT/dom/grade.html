@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container
+    {
+        height: 400px;
+        width: 300px;
+        background: silver;
+        margin-left: 450px;
+    }
+</style>
+<body>
+    <form>
+        <div class="container"><h3>CALCULATING GRADE</h3>
+            <label for="">mark1</label><input type="text" id="sub1" style="margin-left: 50px; margin-top: 40px;"><br><br>
+            <label for="">mark2</label><input type="text" id="sub2" style="margin-left: 50px;"><br><br>
+            <label for="">mark3</label><input type="text" id="sub3" style="margin-left: 50px;"><br><br>
+            <label for="">mark4</label><input type="text" id="sub4" style="margin-left: 50px;"><br><br>
+            <label for="">mark5</label><input type="text" id="sub5" style="margin-left: 50px;"><br><br>
+            <input type="button" value="submit" onclick="grade()"style="margin-left: 50px;">
+            <p id="p" style="margin-left: 50px;"></p>
+            </div>
+    </form>
+    <script>
+        function grade()
+        {
+        var m1=parseInt(document.getElementById("sub1").value);
+        var m2=parseInt(document.getElementById("sub2").value);
+        var m3=parseInt(document.getElementById("sub3").value);
+        var m4=parseInt(document.getElementById("sub4").value);
+        var m5=parseInt(document.getElementById("sub5").value);
+        let avg;
+        avg=(m1+m2+m3+m4+m5)/5;
+        if(avg>=90 & avg>=100)
+        {
+            document.getElementById("p").innerHTML="A+"
+        }
+        else if(avg>=80 & avg>=90)
+        {
+            document.getElementById("p").innerHTML="A"
+        }
+        else if(avg>=70 & avg>=80)
+        {
+            document.getElementById("p").innerHTML="B+"
+        }
+        else if(avg>=60 & avg>=70)
+        {
+            document.getElementById("p").innerHTML="B"
+        }
+        else if(avg>=50 & avg>=60)
+        {
+            document.getElementById("p").innerHTML="C+"
+        }
+        else if(avg>=40 & avg>=50)
+        {
+            document.getElementById("p").innerHTML="C"
+        }
+        else
+        {
+            document.getElementById("p").innerHTML="FAILED"
+        }
+    }
+
+    </script>
+</body>
+</html>

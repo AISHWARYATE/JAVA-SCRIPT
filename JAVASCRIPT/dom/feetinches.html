@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #btn
+    {
+        background-color: red;
+        font-size: 25px;
+    }
+    #ft
+    {
+        color: azure;
+        font-size: 20px;
+    }
+    #ih
+    {
+        color: azure;
+        font-size: 20px;
+        
+    }#p1
+    {
+        color: azure;
+    }
+
+    </style>
+</head>
+<body bgcolor="black">
+    <div class="container">
+        <center><h1 style="color: azure;">HEIGHT CONVERT</h1></center>
+        <form action="">
+            <center><label for="" id="ft">Feet</label><input type="text" id="feet" style="height: 50px; width: 250px; margin-left: 50px;"><br><br></center>
+            <center><label for="" id="ih">Inch</label><input type="text" id="inch" style="height: 50px; width: 250px; margin-left: 50px;"><br><br><br></center>
+            <center><input type="button" id="btn" value="convert to cm"style="height: 50px; width: 200px; margin-left: 50px;" onclick="convert()"></center>
+            <center> <p id="p1"></p></center>
+            <center> <p id="p2"></p></center>
+
+        </form>
+    </div>
+    <script>
+        function convert()
+        {
+           var ft=parseInt(document.getElementById("feet").value);
+           var inches=parseInt(document.getElementById("inch").value);
+           var a=30.48*ft;
+           var b=2.54*inches;
+           document.getElementById("p1").innerHTML=a;
+           console.log(a);
+           document.getElementById("p2").innerHTML=b;
+           console.log(b);
+        }
+    </script>
+</body>
+</html>
